@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianita de Jesus Sevillas</title>
+    <style>
+        /* Estilos Generales */
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #fcf6e5; 
+            color: #4b3621; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        header { padding: 40px 20px; text-align: center; }
+        h1 { color: #8b4513; font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; }
+
+        /* SECCIÓN DEL PERGAMINO */
+        .seccion-pergamino {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pergamino {
+            position: relative;
+            background-image: url('pergamino.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            max-width: 700px;
+            width: 100%;
+            min-height: 750px; /* Altura para que luzca la imagen */
+            box-sizing: border-box;
+            
+            /* AJUSTE PARA LA PLUMA: */
+            /* Arriba 120px, Derecha 60px, Abajo 0px, Izquierda 200px (para no tapar la pluma) */
+            padding: 0px 60px 0px 250px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .frase-box { width: 100%; }
+
+        .frase-box p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            font-style: italic;
+            text-align: left; /* Alineado a la izquierda para que fluya con la pluma */
+            margin-bottom: 30px; 
+            color: #3e2814;
+            font-family: 'Papyrus', fantasy, serif;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+
+        /* GALERÍA DE IMÁGENES */
+        .galeria-titulo { margin-top: 50px; font-size: 1.8rem; color: #8b4513; text-align: center; }
+        .galeria { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            max-width: 1100px; 
+            margin: 30px auto; 
+            padding: 20px; 
+        }
+        .foto-card { 
+            background: white; 
+            padding: 15px; 
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: rotate(-1.5deg);
+            transition: transform 0.3s ease;
+        }
+        .foto-card:nth-child(even) { transform: rotate(1.5deg); }
+        .foto-card:hover { transform: rotate(0deg) scale(1.05); z-index: 10; }
+        .foto-card img { width: 100%; display: block; border-radius: 2px; }
+
+        /* AJUSTE PARA MÓVILES */
+        @media (max-width: 600px) {
+            .pergamino {
+                padding: 150px 30px 80px 140px; /* En móvil el texto baja */
+                min-height: 600px;
+            }
+            .frase-box p {
+                text-align: center;
+                font-size: 1.1rem;
+            }
+        }
+
+        footer { text-align: center; padding: 60px; color: #6b4423; font-size: 0.9rem; }
+    </style>
+</head>
+<bodybody onclick="iniciarMusica()">
+
+    <header>
+        <h1>Marianita de Jesus Sevilla</h1>
+        <p>De parte de tus hijos y nietos</p>
+    </header>
+
+    <section class="seccion-pergamino">
+        <div class="pergamino">
+            <div class="frase-box">
+                <p>"Madre, en un día como hoy, te fuiste a la eternidad. Mi corazón se quedó vacío, mi alma está en agonía, y mi mundo se sumerge en un océano de lágrimas. Siempre te amaré, madre mía."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="foto-card">
+            <img src="foto1.jpeg" alt="Foto 1">
+        </div>
+        </section>
+
+        <section class="seccion-pergamino">
+        <div class="pergamino">
+            <div class="frase-box">
+                <p>"Mi Mamita linda han pasado ya 5 años de tu viaje siempre duermo con la esperanza de despertar y tenerte a mi lado perdoname por llorarte todos los días, hay dias que ya no puedo mas soportar este dolor tu partida destruyo mi vida tengo el corazón roto y lleno de mucho dolor no sabes cuanta falta me haces mamita de mi vida todos los días me pregunto por qué y no tengo respuesta, te extraño mi viejita TE AMARE POR SIEMPRE y viviré con los mejores recuerdos mamita de mi alma. Tu hija que siempre te espera Gloria."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="foto-card">
+            <img src="foto2.jpeg" alt="Foto 2">
+        </div>
+        </section>
+
+        <section class="seccion-pergamino">
+        <div class="pergamino">
+            <div class="frase-box">
+                <p>"Madre, en un día como hoy, te fuiste a la eternidad. Mi corazón se quedó vacío, mi alma está en agonía, y mi mundo se sumerge en un océano de lágrimas. Siempre te amaré, madre mía."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="foto-card">
+            <img src="foto3.jpeg" alt="Foto 1">
+        </div>
+        </section>
+
+    <footer>
+        <p>Escanea el código QR para volver siempre a este momento.</p>
+    </footer>
+    <audio id="musicaFondo" src="musica.mp3" loop></audio>
+
+    <script>
+        function iniciarMusica() {
+            var audio = document.getElementById("musicaFondo");
+            // Intenta reproducir el audio
+            audio.play().catch(function(error) {
+                console.log("Esperando interacción del usuario...");
+            });
+        }
+    </script>
+    
+</body>
+</html>
