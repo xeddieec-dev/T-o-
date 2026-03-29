@@ -77,18 +77,39 @@
         .foto-card:hover { transform: rotate(0deg) scale(1.05); z-index: 10; }
         .foto-card img { width: 100%; display: block; border-radius: 2px; }
 
-        /* AJUSTE PARA MÓVILES */
+        /* --- AJUSTE EXCLUSIVO PARA CELULARES (Menos de 600px) --- */
         @media (max-width: 600px) {
-            .pergamino {
-                padding: 160px 65px 140px 65px; /* En móvil el texto baja */
-                min-height: 600px;
+            .seccion-pergamino {
+                padding: 10px; /* Reducimos el padding exterior para ganar espacio */
             }
+
+            .pergamino {
+                /* EXPLICACIÓN: Arriba 160px (baja el texto del rollo superior), 
+                   Lados 55px (margen lateral seguro para no tocar bordes), 
+                   Abajo 140px (sube el texto del logo y rollo inferior) */
+                padding: 160px 55px 140px 55px; 
+                
+                min-height: 600px; /* Asegura que el pergamino tenga buena altura */
+                background-size: 100% 100%; /* El fondo se estira para cubrir el div */
+                display: flex;
+                align-items: center; /* Centra el bloque de texto verticalmente en el espacio disponible */
+                justify-content: center; /* Centra horizontalmente */
+            }
+
             .frase-box p {
-                text-align: center;
-                font-size: 1.1rem;
+                text-align: center; /* TEXTO CENTRADO */
+                font-size: 0.95rem; /* Letra un poco más pequeña para que quepa mejor */
+                line-height: 1.4; /* Espaciado entre líneas cómodo */
+                margin: 0;
+                
+                /* AGREGAMOS UN FONDO SUTIL detrás del texto para garantizar la lectura 
+                   si alguna letra llega a tocar la pluma oscura */
+                background: rgba(253, 245, 230, 0.5); /* Color crema muy tenue */
+                border-radius: 10px; /* Bordes suaves para el fondo */
+                padding: 10px; /* Espacio interno para el fondo tenue */
+                text-shadow: 1px 1px 1px rgba(255,255,255,0.6); /* Sombra blanca clara */
             }
         }
-
         footer { text-align: center; padding: 60px; color: #6b4423; font-size: 0.9rem; }
     </style>
 </head>
