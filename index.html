@@ -24,7 +24,7 @@
             justify-content: center;
         }
 
-        .pergamino {
+       .pergamino {
             position: relative;
             background-image: url('pergamino.png');
             background-size: 100% 100%;
@@ -32,27 +32,27 @@
             background-position: center;
             max-width: 700px;
             width: 100%;
-            min-height: 750px; /* Altura para que luzca la imagen */
+            min-height: 750px; 
             box-sizing: border-box;
-            
-            /* AJUSTE PARA LA PLUMA: */
-            /* Arriba 120px, Derecha 60px, Abajo 0px, Izquierda 200px (para no tapar la pluma) */
-            padding: 160px 40px 80px 40px; 
+    
+            /* AJUSTE CENTRADO: */
+            /* Arriba 150px, Lados 80px, Abajo 100px */
+            padding: 150px 80px 100px 80px; 
+    
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
-        .frase-box { width: 100%; }
-
         .frase-box p {
-            font-size: 1.25rem;
-            line-height: 1.5;
+            font-size: 1.3rem; /* Lo subimos un poco para que llene mejor el espacio */
+            line-height: 1.6;
             font-style: italic;
-            text-align: center; /* Alineado a la izquierda para que fluya con la pluma */
-            margin-bottom: 30px; 
+            text-align: center; /* CENTRADO TOTAL */
             color: #3e2814;
             font-family: 'Papyrus', fantasy, serif;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.4); /* Sombra clara para leer mejor sobre la pluma */
+            margin: 0;
         }
 
         /* GALERÍA DE IMÁGENES */
