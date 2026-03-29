@@ -89,12 +89,18 @@
             }
             /* Estilo para el aviso de música */
         .aviso-musica {
-            text-align: center;
+            text-align: center; /* Centra el texto horizontalmente */
             color: #8b4513;
             font-weight: bold;
-            font-size: 1.1rem;
-            margin: 10px 0;
+            font-size: 1.2rem;
+            margin: 20px auto; /* Centra el bloque y da espacio arriba/abajo */
             cursor: pointer;
+            display: block; /* Asegura que ocupe todo el ancho para centrarse */
+            width: fit-content; /* El fondo o borde solo rodeará al texto */
+            padding: 10px 20px;
+            border: 1px dashed #8b4513; /* Un borde sutil de estilo antiguo */
+            border-radius: 5px;
+            background-color: rgba(139, 69, 19, 0.1); /* Fondo muy tenue */
             animation: parpadeo 2s infinite;
         }
 
