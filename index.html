@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Torres</title>
+    <title>Marianita de Jesus Sevillas</title>
     <style>
         /* Estilos Generales */
         body { 
@@ -24,7 +24,7 @@
             justify-content: center;
         }
 
-       .pergamino {
+        .pergamino {
             position: relative;
             background-image: url('pergamino.png');
             background-size: 100% 100%;
@@ -32,27 +32,27 @@
             background-position: center;
             max-width: 700px;
             width: 100%;
-            min-height: 750px; 
+            min-height: 750px; /* Altura para que luzca la imagen */
             box-sizing: border-box;
-    
-            /* AJUSTE CENTRADO: */
-            /* Arriba 150px, Lados 80px, Abajo 100px */
-            padding: 150px 135px 100px 135px; 
-    
+            
+            /* AJUSTE PARA LA PLUMA: */
+            /* Arriba 120px, Derecha 60px, Abajo 0px, Izquierda 200px (para no tapar la pluma) */
+            padding: 0px 60px 0px 250px; 
             display: flex;
             align-items: center;
-            justify-content: center;
         }
 
+        .frase-box { width: 100%; }
+
         .frase-box p {
-            font-size: 1.3rem; /* Lo subimos un poco para que llene mejor el espacio */
-            line-height: 1.6;
+            font-size: 1.25rem;
+            line-height: 1.5;
             font-style: italic;
-            text-align: center; /* CENTRADO TOTAL */
+            text-align: left; /* Alineado a la izquierda para que fluya con la pluma */
+            margin-bottom: 30px; 
             color: #3e2814;
             font-family: 'Papyrus', fantasy, serif;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.4); /* Sombra clara para leer mejor sobre la pluma */
-            margin: 0;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
         }
 
         /* GALERÍA DE IMÁGENES */
@@ -77,39 +77,18 @@
         .foto-card:hover { transform: rotate(0deg) scale(1.05); z-index: 10; }
         .foto-card img { width: 100%; display: block; border-radius: 2px; }
 
-        /* --- AJUSTE EXCLUSIVO PARA CELULARES (Menos de 600px) --- */
+        /* AJUSTE PARA MÓVILES */
         @media (max-width: 600px) {
-            .seccion-pergamino {
-                padding: 10px; /* Reducimos el padding exterior para ganar espacio */
-            }
-
             .pergamino {
-                /* EXPLICACIÓN: Arriba 160px (baja el texto del rollo superior), 
-                   Lados 55px (margen lateral seguro para no tocar bordes), 
-                   Abajo 140px (sube el texto del logo y rollo inferior) */
-                padding: 160px 55px 140px 55px; 
-                
-                min-height: 600px; /* Asegura que el pergamino tenga buena altura */
-                background-size: 100% 100%; /* El fondo se estira para cubrir el div */
-                display: flex;
-                align-items: center; /* Centra el bloque de texto verticalmente en el espacio disponible */
-                justify-content: center; /* Centra horizontalmente */
+                padding: 150px 80px 80px 140px; /* En móvil el texto baja */
+                min-height: 600px;
             }
-
             .frase-box p {
-                text-align: center; /* TEXTO CENTRADO */
-                font-size: 0.95rem; /* Letra un poco más pequeña para que quepa mejor */
-                line-height: 1.4; /* Espaciado entre líneas cómodo */
-                margin: 0;
-                
-                /* AGREGAMOS UN FONDO SUTIL detrás del texto para garantizar la lectura 
-                   si alguna letra llega a tocar la pluma oscura */
-                background: rgba(253, 245, 230, 0.5); /* Color crema muy tenue */
-                border-radius: 10px; /* Bordes suaves para el fondo */
-                padding: 10px; /* Espacio interno para el fondo tenue */
-                text-shadow: 1px 1px 1px rgba(255,255,255,0.6); /* Sombra blanca clara */
+                text-align: center;
+                font-size: 1.1rem;
             }
         }
+
         footer { text-align: center; padding: 60px; color: #6b4423; font-size: 0.9rem; }
     </style>
 </head>
