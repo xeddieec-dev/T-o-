@@ -16,6 +16,28 @@
         
         header { padding: 40px 20px; text-align: center; }
         h1 { color: #8b4513; font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; }
+         /* Estilo para el aviso de música */
+        .aviso-musica {
+            text-align: center; /* Centra el texto horizontalmente */
+            color: #8b4513;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px auto; /* Centra el bloque y da espacio arriba/abajo */
+            cursor: pointer;
+            display: block; /* Asegura que ocupe todo el ancho para centrarse */
+            width: fit-content; /* El fondo o borde solo rodeará al texto */
+            padding: 10px 20px;
+            border: 1px dashed #8b4513; /* Un borde sutil de estilo antiguo */
+            border-radius: 5px;
+            background-color: rgba(139, 69, 19, 0.1); /* Fondo muy tenue */
+            animation: parpadeo 2s infinite;
+        }
+
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
 
         /* SECCIÓN DEL PERGAMINO */
         .seccion-pergamino {
@@ -87,28 +109,6 @@
                 text-align: center;
                 font-size: 1.1rem;
             }
-            /* Estilo para el aviso de música */
-            .aviso-musica {
-            text-align: center; /* Centra el texto horizontalmente */
-            color: #8b4513;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin: 20px auto; /* Centra el bloque y da espacio arriba/abajo */
-            cursor: pointer;
-            display: block; /* Asegura que ocupe todo el ancho para centrarse */
-            width: fit-content; /* El fondo o borde solo rodeará al texto */
-            padding: 10px 20px;
-            border: 1px dashed #8b4513; /* Un borde sutil de estilo antiguo */
-            border-radius: 5px;
-            background-color: rgba(139, 69, 19, 0.1); /* Fondo muy tenue */
-            animation: parpadeo 2s infinite;
-        }
-
-        @keyframes parpadeo {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
         }
 
         footer { text-align: center; padding: 60px; color: #6b4423; font-size: 0.9rem; }
@@ -166,9 +166,6 @@
         </div>
         </section>
 
-    <footer>
-        <p>Escanea el código QR para volver siempre a este momento.</p>
-    </footer>
     <audio id="musicaFondo" src="musica.mp3" loop></audio>
 
     <script>
